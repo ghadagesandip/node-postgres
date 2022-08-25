@@ -1,0 +1,24 @@
+version: '3.7'
+services:
+  app:
+    container_name: 'node_posgress_app'
+    restart: always
+    build: .
+    ports: 
+      - "3001:3001"
+    depends_on:
+      - postgres
+      
+  postgres:
+    image: postgres
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_DB: ${POSTGRES_DB}
+    volumes:
+      - ./pgdata:/var/lib/postgresql/data
+    ports: 
+      - '5432:5432'
+       
