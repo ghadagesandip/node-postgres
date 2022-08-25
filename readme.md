@@ -1,7 +1,8 @@
-> npm init
+how to setup application
+> npm i
 
-> npm i typescript ts-node-dev express 
+start app
+> npm start
 
-> npm i @types/express -D
-
-> tsc --init
+note:
+/var/lib/postgres/data folder is used for persisting postgres data
