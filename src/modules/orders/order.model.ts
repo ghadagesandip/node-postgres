@@ -14,6 +14,16 @@ export default class Order extends Model {
 
   @Column
   price!: number;
+
+  @Column
+  product_price!: number;
+
+  @Column
+  quantity!: number;
+
+  @Column
+  total_price!: number;
+
 }
 
 sequelize.addModels([Order]);

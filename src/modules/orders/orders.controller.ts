@@ -23,7 +23,7 @@ export class OrderApi extends BaseCotroller {
     const orderlib: any = new OrderLib();
     try {
       let orders = await orderlib.getOrders();
-      res.json(orders);
+      res.json({data:orders});
     } catch (err) {
       res.status(400).send(err);
     }
